@@ -1,0 +1,18 @@
+.foot { background: var(--yellow); color: var(--black); border-top: 2px solid var(--black); }
+.foot__inner {
+  display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 32px;
+  padding-block: 44px calc(36px + env(safe-area-inset-bottom, 0px));
+}
+.foot__brand { display: flex; gap: 16px; align-items: center; }
+.foot__brand img { width: 84px; height: 84px; flex-shrink: 0; }
+.foot__brand p { font-size: 13px; line-height: 1.6; }
+.foot__links, .foot__contact { display: grid; gap: 8px; align-content: start; font-size: 14px; font-weight: 400; }
+.foot__links a:hover, .foot__contact a:hover { text-decoration: underline; }
+.foot__contact .eyebrow { color: rgba(20, 19, 0, .7); }
+.foot__regret {
+  justify-self: start; margin-top: 6px; font-weight: 600; font-size: 13px;
+  border: 2px solid var(--black); border-radius: 99px; padding: 7px 16px;
+}
+@media (max-width: 760px) {
+  .foot__inner { grid-template-columns: 1fr; gap: 24px; }
+}

@@ -1,0 +1,30 @@
+.sc {
+  position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;
+  background: var(--card); border: 1px solid var(--rule); border-radius: 8px;
+  background-image: repeating-linear-gradient(to bottom, transparent 0 31px, var(--line) 31px 32px);
+  padding: 40px 24px 32px 64px;
+}
+.sc::before { content: ""; position: absolute; top: 0; bottom: 0; left: 44px; width: 2px; background: var(--red); opacity: .7; }
+.sc--compact { grid-template-columns: 1fr; padding: 20px 20px 20px 44px; gap: 0; }
+.sc--compact::before { left: 28px; }
+.sc__tbl { overflow-x: auto; }
+.sc table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.sc th, .sc td { padding: 0 12px; height: 32px; text-align: left; font-size: 15px; }
+.sc th { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); font-weight: 600; }
+.sc td:first-child { font-family: var(--f-display); font-size: 18px; padding-top: 4px; }
+.sc tr.hit td { background: var(--yellow); }
+.sc__calc { display: grid; gap: 12px; min-width: 0; }
+.sc__calc label { font-weight: 600; }
+.sc__row { display: flex; gap: 10px; align-items: center; }
+.sc__row input {
+  font-size: 22px; width: 120px; padding: 8px 12px; border: 2px solid var(--black);
+  border-radius: 12px; background: var(--bg); color: var(--text);
+}
+.sc__result { font-family: var(--f-display); font-size: 40px; line-height: 1; }
+.sc__result small { display: block; font-family: var(--f-body); font-size: 14px; color: var(--soft); margin-top: 8px; line-height: 1.4; }
+.sc__pick { justify-self: start; }
+.sc__tip { color: var(--soft); font-size: 14px; }
+@media (max-width: 760px) {
+  .sc { grid-template-columns: 1fr; padding-left: 44px; }
+  .sc::before { left: 28px; }
+}

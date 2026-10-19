@@ -1,0 +1,19 @@
+.sis {
+  position: fixed; inset: 0; z-index: 100; background: rgba(20, 19, 0, .55);
+  display: grid; place-items: center; padding: 20px;
+}
+.sis__panel {
+  position: relative; background: var(--bg); color: var(--text); border-radius: 20px;
+  width: min(400px, 100%); padding: 32px 28px 28px; display: grid; gap: 14px;
+}
+.sis__panel h3 { font-size: 28px; }
+.sis__desc { color: var(--soft); font-size: 14px; }
+.sis__google { display: flex; justify-content: center; padding-block: 6px; }
+.sis__user { display: flex; align-items: center; gap: 14px; }
+.sis__user img { width: 52px; height: 52px; border-radius: 50%; }
+.sis__user p { color: var(--soft); font-size: 13px; word-break: break-all; }
+.sis__close {
+  position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; font-size: 26px;
+  line-height: 1; border-radius: 50%; color: var(--soft);
+}
+.sis__close:hover { background: var(--card); }

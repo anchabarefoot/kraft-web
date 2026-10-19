@@ -1,0 +1,22 @@
+.hab { background: var(--black); color: #F4F3E6; }
+.hab__inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: start; padding-block: 72px; }
+.hab .eyebrow { color: var(--yellow); }
+.hab h2 { font-size: clamp(32px, 5vw, 50px); margin-top: 8px; }
+.hab__lead { margin-top: 16px; color: #C9C8B8; max-width: 54ch; }
+.hab__vs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+.hab__vs div { background: rgba(255, 255, 255, .06); border-radius: 14px; padding: 16px; display: grid; gap: 4px; font-size: 14px; }
+.hab__vs strong { font-family: var(--f-display); font-weight: 400; font-size: 22px; color: var(--yellow); }
+.hab__evid { display: grid; gap: 20px; margin-top: 28px; }
+.hab__evid > div { display: grid; gap: 4px; padding-left: 16px; border-left: 3px solid var(--yellow); }
+.hab__evid b { font-weight: 600; color: #fff; }
+.hab__evid p { font-size: 14px; color: #C9C8B8; }
+.hab__evid a { color: var(--yellow); font-size: 12px; text-decoration: underline; justify-self: start; }
+.hab__disc { font-size: 13px; color: #9A9A8C; }
+.hab__more { margin-top: 26px; }
+.hab__img { background: #fff; border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; position: sticky; top: calc(var(--nav-h) + 20px); }
+.hab__img img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 900px) {
+  .hab__inner { grid-template-columns: 1fr; padding-block: 52px; }
+  .hab__img { position: static; }
+}
+@media (max-width: 520px) { .hab__vs { grid-template-columns: 1fr; } }

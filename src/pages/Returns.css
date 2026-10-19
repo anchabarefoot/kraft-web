@@ -1,0 +1,56 @@
+.ret__hero { background: var(--yellow); color: var(--black); border-bottom: 2px solid var(--black); padding-block: 44px 40px; }
+.ret__hero .eyebrow { color: rgba(20, 19, 0, .7); }
+.ret__hero h1 { font-size: clamp(40px, 7vw, 72px); margin-top: 6px; }
+.ret__steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.ret__steps li { display: flex; gap: 12px; align-items: center; font-weight: 400; }
+.ret__steps b {
+  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: var(--black); color: var(--yellow);
+  font-family: var(--f-display); font-weight: 400; font-size: 22px; display: grid; place-items: center; padding-top: 4px;
+}
+
+.ret__body { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; padding-block: 40px 80px; align-items: start; }
+.ret__form { border: 1.5px solid var(--rule); border-radius: 20px; padding: 24px; display: grid; gap: 16px; min-width: 0; }
+.ret__two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ret__field { display: grid; gap: 4px; min-width: 0; }
+.ret__field label { font-size: 13px; font-weight: 600; }
+.ret__field input, .ret__field select, .ret__field textarea {
+  font-size: 15px; padding: 11px 12px; border: 1.5px solid var(--rule); border-radius: 12px;
+  background: var(--bg); color: var(--text); width: 100%;
+}
+.ret__field input:focus, .ret__field select:focus, .ret__field textarea:focus { border-color: var(--black); outline: none; }
+.ret__set { border: 0; display: grid; gap: 10px; padding: 16px; border-radius: 14px; background: var(--card); }
+.ret__set legend { font-family: var(--f-display); font-size: 20px; padding-top: 4px; float: left; width: 100%; margin-bottom: 4px; }
+.ret__set--want { background: color-mix(in srgb, var(--yellow) 22%, var(--bg)); }
+.ret__hint { font-size: 13px; color: var(--soft); }
+.ret__hint a { color: var(--text); font-weight: 600; text-decoration: underline; }
+.ret__google { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--soft); }
+.ret__user { display: flex; align-items: center; gap: 10px; font-size: 14px; background: var(--card); border-radius: 99px; padding: 6px 14px 6px 6px; justify-self: start; }
+.ret__user img { width: 32px; height: 32px; border-radius: 50%; }
+.ret__error { color: var(--red); font-weight: 600; font-size: 14px; }
+.ret__send { padding-block: 15px; }
+
+.ret__info { display: grid; gap: 24px; }
+.ret__info > div { display: grid; gap: 8px; }
+.ret__info h3 { font-size: 22px; }
+.ret__info ul { padding-left: 18px; display: grid; gap: 4px; color: var(--soft); font-size: 14px; }
+.ret__info p { color: var(--soft); font-size: 14px; }
+.ret__info a { color: var(--text); font-weight: 600; text-decoration: underline; }
+.ret__regret { justify-self: start; padding: 9px 18px; font-size: 14px; }
+
+.ret-done { padding-block: 80px; display: grid; justify-items: center; text-align: center; gap: 14px; }
+.ret-done__icon {
+  width: 72px; height: 72px; border-radius: 50%; background: var(--yellow); border: 2px solid var(--black);
+  display: grid; place-items: center; font-size: 30px; font-weight: 600;
+}
+.ret-done h1 { font-size: clamp(36px, 6vw, 56px); }
+.ret-done p { color: var(--soft); max-width: 46ch; }
+.ret-done__id { background: var(--card); padding: 8px 16px; border-radius: 99px; }
+
+@media (max-width: 860px) {
+  .ret__body { grid-template-columns: 1fr; }
+  .ret__steps { grid-template-columns: 1fr; gap: 10px; }
+}
+@media (max-width: 520px) {
+  .ret__two { grid-template-columns: 1fr; }
+  .ret__form { padding: 18px; }
+}

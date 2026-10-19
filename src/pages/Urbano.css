@@ -1,0 +1,12 @@
+.urb__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+.urb__card {
+  position: relative; border: 2px dashed var(--rule); border-radius: 20px; padding: 28px 24px;
+  display: grid; gap: 8px; align-content: start; min-height: 180px;
+}
+.urb__card h3 { font-size: 28px; }
+.urb__card p:not(.eyebrow) { color: var(--soft); font-size: 14px; }
+.urb__soon {
+  position: absolute; top: 16px; right: 16px; background: var(--yellow); color: var(--black);
+  font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 99px;
+}
+@media (max-width: 800px) { .urb__grid { grid-template-columns: 1fr; } }

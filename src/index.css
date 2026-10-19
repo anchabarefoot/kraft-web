@@ -1,0 +1,76 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --yellow: #F5FA2E;      /* amarillo del isologo */
+  --black: #141300;       /* negro del isologo */
+  --bg: #FFFFFF;
+  --card: #FAFAF3;
+  --text: #141300;
+  --soft: #5B5A4A;
+  --rule: #E4E3D2;
+  --line: #D6E2F0;        /* renglón de cuaderno */
+  --red: #E0473F;         /* margen de cuaderno, avisos */
+  --mp: #009EE3;
+  --f-display: 'Luckiest Guy', 'Arial Black', Impact, sans-serif;
+  --f-body: 'Poppins', system-ui, sans-serif;
+  --nav-h: 68px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--f-body);
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: .01em;
+  text-wrap: balance;
+}
+
+strong { font-weight: 600; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; color: inherit; }
+img { display: block; max-width: 100%; }
+input, select, textarea { font-family: inherit; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+.eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--soft);
+}
+
+.section { padding-block: 72px; }
+.section h2 { font-size: clamp(32px, 5.5vw, 52px); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 24px; border-radius: 999px; font-weight: 600; font-size: 15px;
+  border: 2px solid var(--black); color: var(--text); transition: transform .15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--yellow { background: var(--yellow); color: var(--black); }
+.btn--black { background: var(--black); color: var(--yellow); }
+.btn--mp { background: var(--mp); color: #fff; border-color: var(--mp); }
+.btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+.draft-note { font-size: 13px; font-weight: 600; color: var(--red); }
+
+@media (max-width: 600px) { .section { padding-block: 52px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
