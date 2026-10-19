@@ -4,10 +4,13 @@
   padding-block: 56px 72px;
 }
 .hero .eyebrow { color: rgba(20, 19, 0, .7); }
-.hero h1 { font-size: clamp(46px, 8vw, 92px); margin-top: 8px; line-height: 1.14; }
+.hero h1 { font-size: clamp(46px, 8vw, 92px); margin-top: 8px; }
+/* Resaltado estilo pincelada: trazo negro con bordes irregulares */
 .hero h1 .hl {
-  background: var(--black); color: var(--yellow); padding: 0 .18em .16em; border-radius: 10px;
-  position: relative; top: .1em;
+  color: var(--yellow); padding: .06em .3em 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100' preserveAspectRatio='none'%3E%3Cpath fill='%23141300' d='M9 20 C22 12 48 15 70 11 C104 6 128 13 160 9 C196 5 222 12 256 8 C288 5 318 11 344 7 C364 5 384 9 394 15 C390 24 397 30 392 40 C398 50 391 58 396 68 C392 80 384 88 366 90 C334 94 306 88 274 92 C238 96 208 89 172 93 C138 97 104 90 72 94 C48 97 26 92 12 88 C6 80 10 72 4 62 C9 52 3 44 8 34 C4 28 6 24 9 20 Z'/%3E%3Cpath fill='%23141300' opacity='.85' d='M384 22 C392 23 398 26 400 30 C397 31 391 29 386 28 Z M381 76 C390 76 397 79 399 84 C394 84 388 82 383 81 Z M2 46 C0 42 4 38 10 39 L10 47 Z'/%3E%3C/svg%3E");
+  background-size: 100% 100%; background-repeat: no-repeat;
   box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
 .hero__lead { margin-top: 20px; font-size: 18px; max-width: 38ch; font-weight: 400; }
