@@ -37,7 +37,7 @@ export const escolar = [
         negro:  ['/images/acordonado-negro.jpg', '/images/acordonado-suela-alta.jpg'],
         blanco: ['/images/acordonado-blanco.jpg', '/images/acordonado-suela-alta.jpg'],
       },
-      ancha: {},
+      ancha: { todos: ['/images/lona-negro.jpg'] },
     },
   },
   {
