@@ -4,9 +4,10 @@
   padding-block: 56px 72px;
 }
 .hero .eyebrow { color: rgba(20, 19, 0, .7); }
-.hero h1 { font-size: clamp(46px, 8vw, 92px); margin-top: 8px; }
+.hero h1 { font-size: clamp(46px, 8vw, 92px); margin-top: 8px; line-height: 1.14; }
 .hero h1 .hl {
-  background: var(--black); color: var(--yellow); padding: .06em .18em 0; border-radius: 10px;
+  background: var(--black); color: var(--yellow); padding: 0 .18em .16em; border-radius: 10px;
+  position: relative; top: .1em;
   box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
 .hero__lead { margin-top: 20px; font-size: 18px; max-width: 38ch; font-weight: 400; }
