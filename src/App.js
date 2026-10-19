@@ -5,6 +5,7 @@ import { CartProvider } from './context/CartContext';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingBuy from './components/FloatingBuy';
 import Home from './pages/Home';
 import Urbano from './pages/Urbano';
 import ProductPage from './pages/ProductPage';
@@ -46,6 +47,7 @@ export default function App() {
               </Routes>
             </main>
             <Footer />
+            <FloatingBuy />
           </BrowserRouter>
         </CartProvider>
       </AuthProvider>

@@ -34,7 +34,7 @@ export default function ProductCard({ product }) {
         </div>
         <div className="pc__foot">
           <p className="pc__price">{formatPrice(price)}<small>Talles 22 al 34</small></p>
-          <Link to={to} className="btn btn--yellow">Elegir talle</Link>
+          <Link to={to} className="btn btn--brush">Comprar</Link>
         </div>
       </div>
     </article>

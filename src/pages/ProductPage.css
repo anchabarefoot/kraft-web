@@ -50,8 +50,8 @@
 .pp__sizes button:hover { border-color: var(--black); }
 .pp__sizes button[aria-pressed="true"] { background: var(--black); color: var(--yellow); border-color: var(--black); }
 .pp__calc-toggle { justify-self: start; font-size: 13px; font-weight: 600; text-decoration: underline; }
-.pp__add { width: 100%; padding-block: 16px; font-size: 16px; margin-top: 6px; }
-.pp__add.added { background: #2E7D32; color: #fff; border-color: #2E7D32; }
+.pp__add { width: 100%; margin-top: 10px; }
+.pp__add.added { color: #9BE58F; }
 .pp__go { font-weight: 600; text-align: center; text-decoration: underline; }
 .pp__facts { list-style: none; display: grid; gap: 6px; font-size: 13px; color: var(--soft); padding-top: 8px; }
 .pp__facts li::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 1.5px var(--black); margin-right: 10px; }

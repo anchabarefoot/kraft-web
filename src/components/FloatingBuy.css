@@ -1,0 +1,11 @@
+.fbuy {
+  position: fixed; z-index: 40;
+  right: max(18px, env(safe-area-inset-right, 0px));
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  font-size: 22px; padding: 18px 34px 13px;
+  filter: drop-shadow(0 8px 14px rgba(20, 19, 0, .35));
+  opacity: 0; pointer-events: none; transform: rotate(-4deg) translateY(16px);
+  transition: opacity .25s, transform .25s;
+}
+.fbuy.fbuy--on { opacity: 1; pointer-events: auto; transform: rotate(-4deg); }
+.fbuy.fbuy--on:hover { transform: rotate(-4deg) scale(1.05); }

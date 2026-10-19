@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { escolar } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import HormaAnchaBlock from '../components/HormaAnchaBlock';
+import BuyBand from '../components/BuyBand';
+import scrollToModelos from '../scrollToModelos';
 import './Home.css';
 
 export default function Home() {
@@ -15,7 +17,7 @@ export default function Home() {
             <h1>Zapatillas de cole que <span className="hl">llegan a diciembre.</span></h1>
             <p className="hero__lead">Calzado escolar para chicos en horma clásica o ancha, con suela de TR flexible. Hecho en Argentina.</p>
             <div className="hero__ctas">
-              <a href="#modelos" className="btn btn--black">Ver modelos</a>
+              <a href="#modelos" onClick={scrollToModelos} className="btn btn--brush btn--lg">Comprar ahora</a>
               <Link to="/talles" className="btn">Encontrá su talle</Link>
             </div>
           </div>
@@ -48,7 +50,11 @@ export default function Home() {
         </div>
       </section>
 
+      <BuyBand title="Volvé a clases con KRAFT." text="Tres modelos, dos hormas y talles del 22 al 34. Pagás con Mercado Pago." />
+
       <HormaAnchaBlock />
+
+      <BuyBand title="¿Ya elegiste la horma?" text="Clásica o ancha, en Acordonado, Elástico y Lona." cta="Elegir mi par" />
 
       <section className="section">
         <div className="container home__duo">

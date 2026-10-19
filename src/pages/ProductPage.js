@@ -94,7 +94,7 @@ export default function ProductPage() {
           {showCalc && <SizeCalc compact onPick={t => { setSize(t); setSizeError(false); }} />}
         </div>
 
-        <button className={`btn btn--black pp__add ${added ? 'added' : ''}`} onClick={handleAdd} disabled={price == null}>
+        <button className={`btn btn--brush btn--lg pp__add ${added ? 'added' : ''}`} onClick={handleAdd} disabled={price == null}>
           {price == null ? 'Precio próximamente' : added ? '✓ Agregado al carrito' : 'Agregar al carrito'}
         </button>
         {added && <Link to="/carrito" className="pp__go">Ir al carrito y pagar con Mercado Pago →</Link>}

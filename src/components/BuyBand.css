@@ -1,0 +1,8 @@
+.bb { background: var(--yellow); color: var(--black); border-block: 2px solid var(--black); }
+.bb__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  padding-block: 40px;
+}
+.bb h2 { font-size: clamp(30px, 5vw, 50px); }
+.bb p { margin-top: 6px; font-weight: 400; max-width: 46ch; }
+@media (max-width: 600px) { .bb__inner { padding-block: 32px; } .bb .btn--brush { width: 100%; } }
