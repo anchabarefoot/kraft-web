@@ -21,26 +21,27 @@ export default function HormaAnchaBlock({ full = false }) {
 
           {full && (
             <div className="hab__evid">
+              <h3 className="hab__why">Por qué anCHA</h3>
               <div>
-                <b>Lugar para el dedo gordo</b>
-                <p>En Austria midieron a 858 chicos de jardín: la mayoría usaba zapatos cortos, y los que tenían el calzado más corto mostraban el dedo gordo más torcido hacia adentro.</p>
-                <a href="https://bmcmusculoskeletdisord.biomedcentral.com/articles/10.1186/1471-2474-10-159" target="_blank" rel="noreferrer">Klein y otros, 2009</a>
+                <b>Hacemos nuestras propias suelas</b>
+                <p>anCHA diseña y fabrica bases de TR para calzado barefoot en Caseros, Buenos Aires. La horma ancha de KRAFT lleva esa misma base.</p>
               </div>
               <div>
-                <b>Un arco que se forma solo</b>
-                <p>En un estudio con 810 chicos y adolescentes, los que crecieron más tiempo descalzos tenían arcos más altos que los que usaban calzado todo el día.</p>
-                <a href="https://www.nature.com/articles/s41598-017-07868-4" target="_blank" rel="noreferrer">Hollander y otros, 2017</a>
+                <b>Matrices propias, pensadas para chicos</b>
+                <p>Las suelas de niño salen de matrices hechas para nosotros, con la forma ancha y la flexibilidad que necesita un pie que crece.</p>
               </div>
               <div>
-                <b>El pie plano en los chicos es normal</b>
-                <p>En 1.851 escolares de 3 a 12 años, el pie plano era más común en los más chicos y bajaba con la edad. Después de la edad, el calzado era lo que más influía.</p>
-                <a href="https://www.elsevier.es/es-revista-revista-espanola-cirugia-ortopedica-traumatologia-129-articulo-desarrollo-morfologia-huella-plantar-ninos-S1888441503761438" target="_blank" rel="noreferrer">Revista Española de Cirugía Ortopédica</a>
+                <b>Experiencia en barefoot</b>
+                <p>Antes de KRAFT, anCHA ya hacía calzado barefoot para adultos y provee bases a otras marcas del país.</p>
               </div>
-              <p className="hab__disc">No reemplaza la consulta con el pediatra o el traumatólogo. Si tu hijo usa plantillas o tiene indicación médica, consultalo antes de cambiar de calzado.</p>
+              <div>
+                <b>Industria Argentina</b>
+                <p>Producimos acá, con talleres de la zona, y reponemos talles durante todo el ciclo lectivo.</p>
+              </div>
             </div>
           )}
 
-          {!full && <Link to="/horma-ancha" className="btn btn--yellow hab__more">Qué dicen los estudios →</Link>}
+          {!full && <Link to="/horma-ancha" className="btn btn--yellow hab__more">Por qué anCHA →</Link>}
         </div>
         <div className="hab__img"><img src="/images/elastico-ancha-arriba.jpg" alt="Zapatilla de horma ancha vista desde arriba: puntera amplia y redondeada" loading="lazy" /></div>
       </div>
