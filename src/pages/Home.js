@@ -17,7 +17,7 @@ export default function Home() {
             <h1>Zapatillas de cole que <span className="hl">llegan a diciembre.</span></h1>
             <p className="hero__lead">Calzado escolar para chicos en horma clásica o ancha, con suela de TR flexible. Hecho en Argentina.</p>
             <div className="hero__ctas">
-              <a href="#modelos" onClick={scrollToModelos} className="btn btn--brush btn--lg">Comprar ahora</a>
+              <a href="#modelos" onClick={scrollToModelos} className="btn btn--brush btn--lg" data-buy-anchor>Comprar ahora</a>
               <Link to="/talles" className="btn">Encontrá su talle</Link>
             </div>
           </div>
