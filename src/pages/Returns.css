@@ -54,3 +54,7 @@
   .ret__two { grid-template-columns: 1fr; }
   .ret__form { padding: 18px; }
 }
+
+.ret-done__ship { display: grid; gap: 8px; max-width: 460px; border: 1.5px solid var(--rule); border-radius: 16px; padding: 20px; text-align: left; }
+.ret-done__ship p { max-width: none; }
+.ret-done__addr { color: var(--text) !important; background: var(--card); border-radius: 10px; padding: 12px 14px; line-height: 1.6; }

@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useCart, lineKey } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { COLORS, HORMAS, formatPrice } from '../data/products';
 import './Cart.css';
+
+// Mail de confirmación de compra (misma cuenta y plantilla que anCHA)
+const EMAILJS_SERVICE_ID  = 'service_nzpelnk';
+const EMAILJS_TEMPLATE_ID = 'template_oaqxvw9';
+const EMAILJS_PUBLIC_KEY  = '8nHj4qUv_chBr6Qsz';
 
 // Envío: a confirmar
 const ENVIO = 3500;
@@ -50,6 +56,27 @@ export default function Cart() {
       setLoading(false);
     }
   };
+
+  // Al volver de Mercado Pago con el pago aprobado: avisar por mail y vaciar el carrito
+  const mailSent = useRef(false);
+  useEffect(() => {
+    if (pago !== 'ok' || items.length === 0 || mailSent.current) return;
+    mailSent.current = true;
+    const orderId = `KRF-${Math.floor(10000 + Math.random() * 90000)}`;
+    const lista = items.map(i =>
+      `KRAFT ${i.name} · Horma ${HORMAS[i.horma]?.label.toLowerCase()} · ${COLORS[i.color]?.label} · Talle ${i.size} x${i.qty} — ${formatPrice(i.price * i.qty)}`
+    ).join('\n');
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      order_id: orderId,
+      email: '',
+      orders: lista,
+      'cost.shipping': shipping ? formatPrice(shipping) : 'Gratis',
+      'cost.tax': '$0',
+      'cost.total': formatPrice(grandTotal),
+    }, EMAILJS_PUBLIC_KEY)
+      .catch(err => console.error('EmailJS error:', err))
+      .finally(() => clear());
+  }, [pago]); // eslint-disable-line
 
   if (pago === 'ok') return (
     <Status icon="✓" title="¡Pago confirmado!" text="Tu pedido está en preparación. En 24 a 48 hs hábiles te mandamos el seguimiento del envío.">

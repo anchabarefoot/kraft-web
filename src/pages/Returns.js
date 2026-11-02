@@ -13,7 +13,7 @@ import './Returns.css';
 // {{modelo}}, {{modelo_quiere}}, {{color_tiene}}, {{talle_tiene}}, {{color_quiere}},
 // {{talle_quiere}}, {{motivo}}, {{comentario}}, {{diferencia}}, {{solicitud_id}}
 const EMAILJS_SERVICE_ID  = 'service_nzpelnk';
-const EMAILJS_TEMPLATE_ID = 'template_v27tu8t';
+const EMAILJS_TEMPLATE_ID = 'template_e7khe86';
 const EMAILJS_PUBLIC_KEY  = '8nHj4qUv_chBr6Qsz';
 
 const MOTIVOS = ['Cambio de talle', 'Cambio de horma', 'Cambio de color', 'Falla', 'Devolución por arrepentimiento'];
@@ -63,7 +63,8 @@ export default function Returns() {
         solicitud_id: id,
       }, EMAILJS_PUBLIC_KEY);
       setDone(id);
-    } catch {
+    } catch (err) {
+      console.error('EmailJS error:', err);
       setError('No se pudo enviar. Escribinos por Instagram a @kraftescolar con tu número de pedido.');
     } finally {
       setSending(false);
@@ -77,6 +78,11 @@ export default function Returns() {
       <h1>¡Listo, {nombre.split(' ')[0]}!</h1>
       <p>En 24 a 48 hs hábiles te escribimos a <strong>{email}</strong> con los pasos para mandarnos el par.</p>
       <p className="ret-done__id">N.º de solicitud: <strong>{done}</strong></p>
+      <div className="ret-done__ship">
+        <p className="eyebrow">Cómo mandarnos el par</p>
+        <p>Guardá el calzado en su caja y despachalo en cualquier sucursal de Andreani a:</p>
+        <p className="ret-done__addr"><strong>KRAFT · Devoluciones</strong><br />Esteban Merlo 5164, Caseros, Prov. de Buenos Aires<br />Ref.: N.º de solicitud {done}</p>
+      </div>
       <Link to="/" className="btn btn--yellow">Volver al inicio</Link>
     </div>
   );
