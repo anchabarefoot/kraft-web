@@ -14,7 +14,7 @@ export default function Home() {
         <div className="hero__inner container">
           <div>
             <p className="eyebrow">Ciclo lectivo 2027</p>
-            <h1>Zapatillas de cole que <span className="hl">llegan a diciembre.</span></h1>
+            <h1>Libres para <span className="hl">jugar.</span></h1>
             <p className="hero__lead">Calzado escolar para chicos en horma clásica o ancha, con suela de TR flexible. Hecho en Argentina.</p>
             <div className="hero__ctas">
               <a href="#modelos" onClick={scrollToModelos} className="btn btn--brush btn--lg" data-buy-anchor>Comprar ahora</a>
@@ -41,10 +41,10 @@ export default function Home() {
       <section className="section home__why">
         <div className="container">
           <p className="eyebrow">Por qué KRAFT</p>
-          <h2>Pensado para el recreo.</h2>
+          <h2>Pies libres, chicos felices.</h2>
           <div className="why">
-            <div><h3>Suela que flexiona</h3><p>Base de TR que acompaña el paso y aguanta patio, escalera y educación física.</p></div>
-            <div><h3>Dos hormas</h3><p>Clásica, la de siempre. Ancha, con lugar para los cinco dedos.</p></div>
+            <div><h3>Se dobla con su pie</h3><p>Suela de TR flexible que acompaña cada salto, carrera y partido en el patio.</p></div>
+            <div><h3>Lugar para los cinco dedos</h3><p>En la versión ancha, el pie se abre y se mueve como quiere.</p></div>
             <div><h3>Hecho acá</h3><p>Fabricado en Argentina por Grupo anCHA, con reposición de talles todo el año.</p></div>
           </div>
         </div>
