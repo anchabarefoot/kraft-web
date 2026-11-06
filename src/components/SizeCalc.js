@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './SizeCalc.css';
 
-// Tabla orientativa: talle 22 = 14,0 cm y cada talle suma 2/3 cm.
+// Tabla orientativa: talle 23 = 14,7 cm y cada talle suma 2/3 cm (punto francés).
 // Ajustar con las medidas reales de la horma cuando estén.
-export const TABLA = Array.from({ length: 13 }, (_, i) => ({ talle: String(22 + i), cm: 14 + i * (2 / 3) }));
+export const TABLA = Array.from({ length: 19 }, (_, i) => ({ talle: String(23 + i), cm: 14 + (i + 1) * (2 / 3) }));
 export const MARGEN_CM = 0.5;
 
 export const talleParaPie = cm => {
@@ -20,8 +20,8 @@ export default function SizeCalc({ compact = false, onPick }) {
 
   let result;
   if (val === '' || Number.isNaN(cm)) result = <>Ingresá una medida<small>Por ejemplo: 18</small></>;
-  else if (talle === null) result = <>Menos de talle 22<small>Todavía no fabricamos ese talle</small></>;
-  else if (talle === 'mayor') result = <>Más de talle 34<small>Escribinos y te asesoramos</small></>;
+  else if (talle === null) result = <>Menos de talle 23<small>Todavía no fabricamos ese talle</small></>;
+  else if (talle === 'mayor') result = <>Más de talle 41<small>Escribinos y te asesoramos</small></>;
   else result = <>Talle {talle}<small>Para un pie de {fmt(cm)} cm, con medio centímetro para crecer</small></>;
 
   return (
@@ -41,7 +41,7 @@ export default function SizeCalc({ compact = false, onPick }) {
       <div className="sc__calc">
         <label htmlFor={compact ? 'sc-cm-c' : 'sc-cm'}>Largo del pie en cm</label>
         <div className="sc__row">
-          <input id={compact ? 'sc-cm-c' : 'sc-cm'} type="number" inputMode="decimal" step="0.1" min="10" max="26"
+          <input id={compact ? 'sc-cm-c' : 'sc-cm'} type="number" inputMode="decimal" step="0.1" min="10" max="30"
             value={val} onChange={e => setVal(e.target.value)} />
           <span>cm</span>
         </div>

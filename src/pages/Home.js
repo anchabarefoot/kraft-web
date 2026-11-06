@@ -23,7 +23,7 @@ export default function Home() {
           </div>
           <div className="hero__mascot">
             <img src="/images/logo_kraft.png" alt="Isologo KRAFT" />
-            <span className="hero__sticker">Talles 22 al 34</span>
+            <span className="hero__sticker">Talles 23 al 41</span>
           </div>
         </div>
       </section>

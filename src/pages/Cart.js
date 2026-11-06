@@ -11,9 +11,8 @@ const EMAILJS_SERVICE_ID  = 'service_nzpelnk';
 const EMAILJS_TEMPLATE_ID = 'template_oaqxvw9';
 const EMAILJS_PUBLIC_KEY  = '8nHj4qUv_chBr6Qsz';
 
-// Envío: a confirmar
-const ENVIO = 3500;
-const ENVIO_GRATIS_DESDE = 80000;
+// Envío: precio fijo, sin envío gratis por ahora
+const ENVIO = 5000;
 
 export default function Cart() {
   const { items, remove, setQty, clear, total } = useCart();
@@ -23,7 +22,7 @@ export default function Cart() {
   const [searchParams] = useSearchParams();
   const pago = searchParams.get('pago');
 
-  const shipping = total >= ENVIO_GRATIS_DESDE ? 0 : ENVIO;
+  const shipping = ENVIO;
   const grandTotal = total + shipping;
 
   const handleMercadoPago = async () => {
@@ -137,7 +136,6 @@ export default function Cart() {
           <h2>Resumen</h2>
           <div className="cart__line"><span>Subtotal</span><span>{formatPrice(total)}</span></div>
           <div className="cart__line"><span>Envío</span><span>{shipping ? formatPrice(shipping) : 'Gratis'}</span></div>
-          {shipping > 0 && <p className="cart__note">Envío gratis desde {formatPrice(ENVIO_GRATIS_DESDE)}</p>}
           <div className="cart__line cart__line--total"><span>Total</span><span>{formatPrice(grandTotal)}</span></div>
           <button className="btn btn--mp cart__pay" onClick={handleMercadoPago} disabled={loading}>
             {loading ? 'Abriendo Mercado Pago…' : 'Pagar con Mercado Pago'}

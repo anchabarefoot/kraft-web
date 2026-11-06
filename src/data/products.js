@@ -19,7 +19,7 @@ export const HORMAS = {
 };
 
 // Talles simples (no binumerales)
-export const SIZES = ['22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34'];
+export const SIZES = Array.from({ length: 19 }, (_, i) => String(23 + i)); // 23 al 41
 
 // images[horma][color] → lista de fotos. Si falta, se usa images[horma].todos.
 export const escolar = [

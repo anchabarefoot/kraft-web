@@ -32,7 +32,7 @@ export default function ProductCard({ product }) {
           ))}
         </div>
         <div className="pc__foot">
-          <p className="pc__price">{formatPrice(price)}<small>Talles 22 al 34</small></p>
+          <p className="pc__price">{formatPrice(price)}<small>Talles 23 al 41</small></p>
           <Link to={to} className="btn btn--brush">Comprar</Link>
         </div>
       </div>
