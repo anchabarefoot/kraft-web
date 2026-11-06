@@ -50,7 +50,7 @@ export default function SizeCalc({ compact = false, onPick }) {
           <button className="btn btn--yellow sc__pick" onClick={() => onPick(talle)}>Elegir talle {talle}</button>
         )}
         <p className="sc__tip">Parado sobre una hoja, marcá el talón y la punta del dedo más largo, y medí la distancia.</p>
-        {!compact && <p className="draft-note">Tabla orientativa, a confirmar con la horma.</p>}
+        {!compact && <p className="draft-note">Tabla orientativa, a confirmar.</p>}
       </div>
     </div>
   );

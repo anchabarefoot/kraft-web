@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
     <article className="pc">
       <Link to={to} className="pc__img">
         {imgs[0]
-          ? <img src={imgs[0]} alt={`${product.name} horma ${HORMAS[horma].label.toLowerCase()}`} loading="lazy" />
+          ? <img src={imgs[0]} alt={`${product.name} ${HORMAS[horma].label.toLowerCase()}`} loading="lazy" />
           : <span className="pc__empty">Foto en producción</span>}
       </Link>
       <div className="pc__body">
@@ -26,8 +26,7 @@ export default function ProductCard({ product }) {
             {product.colors.map(c => <span key={c} style={{ background: COLORS[c].hex }} title={COLORS[c].label} />)}
           </div>
         </div>
-        <div className="pc__hormas" role="group" aria-label="Horma">
-          <span>Horma</span>
+        <div className="pc__hormas" role="group" aria-label="Versión">
           {product.hormas.map(h => (
             <button key={h} aria-pressed={horma === h} onClick={() => setHorma(h)}>{HORMAS[h].label}</button>
           ))}

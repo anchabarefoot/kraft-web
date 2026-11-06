@@ -16,10 +16,10 @@ const EMAILJS_SERVICE_ID  = 'service_nzpelnk';
 const EMAILJS_TEMPLATE_ID = 'template_e7khe86';
 const EMAILJS_PUBLIC_KEY  = '8nHj4qUv_chBr6Qsz';
 
-const MOTIVOS = ['Cambio de talle', 'Cambio de horma', 'Cambio de color', 'Falla', 'Devolución por arrepentimiento'];
+const MOTIVOS = ['Cambio de talle', 'Cambio de clásica a ancha (o al revés)', 'Cambio de color', 'Falla', 'Devolución por arrepentimiento'];
 const ARREPENTIMIENTO = MOTIVOS[4];
 
-const label = (id, horma) => `KRAFT ${escolar.find(p => p.id === id)?.name || id} · horma ${HORMAS[horma]?.label.toLowerCase() || ''}`;
+const label = (id, horma) => `KRAFT ${escolar.find(p => p.id === id)?.name || id} · ${HORMAS[horma]?.label || ''}`;
 
 export default function Returns() {
   const { user, loginWithGoogle } = useAuth();
@@ -146,7 +146,7 @@ export default function Returns() {
                   {escolar.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
                 </select>
               </Field>
-              <Field id="r-horma" label="Horma">
+              <Field id="r-horma" label="Versión">
                 <select id="r-horma" value={form.horma} onChange={e => f('horma', e.target.value)}>
                   {modelo.hormas.map(h => <option key={h} value={h}>{HORMAS[h].label}</option>)}
                 </select>
@@ -169,7 +169,7 @@ export default function Returns() {
             <fieldset className="ret__set ret__set--want">
               <legend>Lo que necesitás</legend>
               <div className="ret__two">
-                <Field id="r-hq" label="Horma">
+                <Field id="r-hq" label="Versión">
                   <select id="r-hq" value={form.hormaQuiere} onChange={e => f('hormaQuiere', e.target.value)}>
                     {modelo.hormas.map(h => <option key={h} value={h}>{HORMAS[h].label}</option>)}
                   </select>

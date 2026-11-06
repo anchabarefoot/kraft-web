@@ -8,7 +8,7 @@ import './Navbar.css';
 const LINKS = [
   { to: '/', label: 'Escolar', end: true },
   { to: '/urbano', label: 'Urbano', badge: 'Pronto' },
-  { to: '/horma-ancha', label: 'Horma ancha' },
+  { to: '/horma-ancha', label: 'Por qué anCHA' },
   { to: '/talles', label: 'Talles' },
   { to: '/cambios', label: 'Cambios' },
 ];

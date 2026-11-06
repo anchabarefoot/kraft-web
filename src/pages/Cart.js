@@ -64,7 +64,7 @@ export default function Cart() {
     mailSent.current = true;
     const orderId = `KRF-${Math.floor(10000 + Math.random() * 90000)}`;
     const lista = items.map(i =>
-      `KRAFT ${i.name} · Horma ${HORMAS[i.horma]?.label.toLowerCase()} · ${COLORS[i.color]?.label} · Talle ${i.size} x${i.qty} — ${formatPrice(i.price * i.qty)}`
+      `KRAFT ${i.name} · ${HORMAS[i.horma]?.label} · ${COLORS[i.color]?.label} · Talle ${i.size} x${i.qty} — ${formatPrice(i.price * i.qty)}`
     ).join('\n');
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
       order_id: orderId,
@@ -95,7 +95,7 @@ export default function Cart() {
   );
 
   if (items.length === 0) return (
-    <Status icon="0" title="Tu carrito está vacío" text="Elegí modelo, horma y talle, y lo sumás acá.">
+    <Status icon="0" title="Tu carrito está vacío" text="Elegí modelo, versión y talle, y lo sumás acá.">
       <Link to="/" className="btn btn--yellow">Ver modelos</Link>
     </Status>
   );
@@ -116,7 +116,7 @@ export default function Cart() {
                 <div className="cart__img">{item.image && <img src={item.image} alt="" />}</div>
                 <div className="cart__info">
                   <h3>{item.name}</h3>
-                  <p>Horma {HORMAS[item.horma]?.label.toLowerCase()} · {COLORS[item.color]?.label} · Talle {item.size}</p>
+                  <p>{HORMAS[item.horma]?.label} · {COLORS[item.color]?.label} · Talle {item.size}</p>
                   <p className="cart__unit">{formatPrice(item.price)} c/u</p>
                 </div>
                 <div className="cart__right">

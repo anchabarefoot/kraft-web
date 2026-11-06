@@ -40,8 +40,8 @@ export default function ProductPage() {
       <div className="pp__gallery">
         <div className="pp__main">
           {imgs[activeImg]
-            ? <img src={imgs[activeImg]} alt={`${product.name}, horma ${HORMAS[horma].label}`} />
-            : <span className="pp__empty">Foto de la horma {HORMAS[horma].label.toLowerCase()} en producción</span>}
+            ? <img src={imgs[activeImg]} alt={`${product.name}, ${HORMAS[horma].label.toLowerCase()}`} />
+            : <span className="pp__empty">Foto de la versión {HORMAS[horma].label.toLowerCase()} en producción</span>}
         </div>
         {imgs.length > 1 && (
           <div className="pp__thumbs">
@@ -62,7 +62,7 @@ export default function ProductPage() {
         <p className="pp__desc">{product.description}</p>
 
         <div className="pp__block">
-          <p className="pp__label">Horma: <strong>{HORMAS[horma].label}</strong></p>
+          <p className="pp__label">Versión: <strong>{HORMAS[horma].label}</strong></p>
           <div className="pp__opts">
             {product.hormas.map(h => (
               <button key={h} aria-pressed={horma === h} onClick={() => setHorma(h)}>{HORMAS[h].label}</button>
@@ -100,7 +100,7 @@ export default function ProductPage() {
         {added && <Link to="/carrito" className="pp__go">Ir al carrito y pagar con Mercado Pago →</Link>}
 
         <ul className="pp__facts">
-          <li>Suela de TR flexible</li>
+          <li>Se flexiona con su pie</li>
           <li>Cambio de talle dentro de los 30 días</li>
           <li>Industria Argentina</li>
         </ul>

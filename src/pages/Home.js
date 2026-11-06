@@ -15,7 +15,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Ciclo lectivo 2027</p>
             <h1>Libres para <span className="hl">jugar.</span></h1>
-            <p className="hero__lead">Calzado escolar para chicos en horma clásica o ancha, con suela de TR flexible. Hecho en Argentina.</p>
+            <p className="hero__lead">Calzado escolar flexible, clásico o ancho. Industria Argentina.</p>
             <div className="hero__ctas">
               <a href="#modelos" onClick={scrollToModelos} className="btn btn--brush btn--lg" data-buy-anchor>Comprar ahora</a>
               <Link to="/talles" className="btn">Encontrá su talle</Link>
@@ -31,7 +31,7 @@ export default function Home() {
       <section className="section" id="modelos">
         <div className="container">
           <p className="eyebrow">Línea escolar</p>
-          <h2>Tres modelos, dos hormas.</h2>
+          <h2>Tres modelos.</h2>
           <div className="home__grid">
             {escolar.map(p => <ProductCard key={p.id} product={p} />)}
           </div>
@@ -43,18 +43,16 @@ export default function Home() {
           <p className="eyebrow">Por qué KRAFT</p>
           <h2>Pies libres, chicos felices.</h2>
           <div className="why">
-            <div><h3>Se dobla con su pie</h3><p>Suela de TR flexible que acompaña cada salto, carrera y partido en el patio.</p></div>
+            <div><h3>Se flexiona con su pie</h3><p>Acompaña cada salto, carrera y partido en el patio.</p></div>
             <div><h3>Lugar para los cinco dedos</h3><p>En la versión ancha, el pie se abre y se mueve como quiere.</p></div>
-            <div><h3>Hecho acá</h3><p>Fabricado en Argentina por Grupo anCHA, con reposición de talles todo el año.</p></div>
+            <div><h3>Industria Argentina</h3></div>
           </div>
         </div>
       </section>
 
-      <BuyBand title="Volvé a clases con KRAFT." text="Tres modelos, dos hormas y talles del 22 al 34. Pagás con Mercado Pago." />
+      <BuyBand title="Andá a clases con KRAFT." text="Acordonado, Elástico y Lona. Pagás con Mercado Pago." />
 
       <HormaAnchaBlock />
-
-      <BuyBand title="¿Ya elegiste la horma?" text="Clásica o ancha, en Acordonado, Elástico y Lona." cta="Elegir mi par" />
 
       <section className="section">
         <div className="container home__duo">

@@ -11,7 +11,7 @@ export default function Urbano() {
           <div>
             <p className="eyebrow">Próximamente</p>
             <h1>Para después del timbre: <span className="hl">KRAFT Urbano.</span></h1>
-            <p className="hero__lead">Calzado de todos los días para chicos: plaza, cumple y fin de semana. Misma suela y las mismas dos hormas, con más color.</p>
+            <p className="hero__lead">Calzado de todos los días para chicos: plaza, cumple y fin de semana. Igual de flexible, clásica o ancha, con más color.</p>
             <div className="hero__ctas">
               <a href="https://instagram.com/kraftescolar" target="_blank" rel="noreferrer" className="btn btn--black">Avisame cuando salga</a>
             </div>

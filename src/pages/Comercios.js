@@ -8,7 +8,7 @@ export default function Comercios() {
         <h2>Vendé KRAFT en tu local.</h2>
         <p style={{ color: 'var(--soft)' }}>
           Venta por mayor a zapaterías, uniformerías y cooperadoras escolares. Armamos curva de talles del 22 al 34
-          para el inicio de clases, en horma clásica y ancha.
+          para el inicio de clases, en versión clásica y ancha.
         </p>
         <div style={{ background: 'var(--yellow)', color: 'var(--black)', borderRadius: 20, padding: 28, display: 'grid', gap: 8, border: '2px solid var(--black)' }}>
           <h3 style={{ fontSize: 26 }}>Escribinos</h3>

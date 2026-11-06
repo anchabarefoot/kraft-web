@@ -13,7 +13,7 @@ export default function Footer() {
         <nav className="foot__links">
           <Link to="/">Escolar</Link>
           <Link to="/urbano">Urbano</Link>
-          <Link to="/horma-ancha">Horma ancha</Link>
+          <Link to="/horma-ancha">Por qué anCHA</Link>
           <Link to="/talles">Guía de talles</Link>
           <Link to="/cambios">Cambios y devoluciones</Link>
           <Link to="/comercios">Comercios y colegios</Link>

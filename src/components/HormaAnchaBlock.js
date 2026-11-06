@@ -8,27 +8,27 @@ export default function HormaAnchaBlock({ full = false }) {
     <section className="hab">
       <div className="hab__inner container">
         <div className="hab__text">
-          <p className="eyebrow">Horma ancha (barefoot)</p>
+          <p className="eyebrow">Versión ancha</p>
           <h2>Un zapato con la forma del pie, no al revés.</h2>
-          <p className="hab__lead">
+          {full && <p className="hab__lead">
             El pie de los chicos todavía se está formando: el arco se arma con los años y los huesos son blandos.
-            Un zapato angosto o corto le va dando forma al pie mientras crece. La horma ancha deja que el pie crezca como es.
-          </p>
+            Un zapato angosto o corto le va dando forma al pie mientras crece. La versión ancha deja que el pie crezca como es.
+          </p>}
           <div className="hab__vs">
-            <div><strong>Clásica</strong>La horma de siempre, con la puntera que se angosta hacia adelante.</div>
-            <div><strong>Ancha</strong>Puntera con lugar para los cinco dedos, suela fina y flexible, sin taco.</div>
+            <div><strong>Clásica</strong>La de siempre, que se angosta hacia adelante.</div>
+            <div><strong>Ancha</strong>Lugar para los cinco dedos, flexible y sin taco.</div>
           </div>
 
           {full && (
             <div className="hab__evid">
               <h3 className="hab__why">Por qué anCHA</h3>
               <div>
-                <b>Hacemos nuestras propias suelas</b>
-                <p>anCHA diseña y fabrica bases de TR para calzado barefoot en Caseros, Buenos Aires. La horma ancha de KRAFT lleva esa misma base.</p>
+                <b>Hacemos nuestras propias bases</b>
+                <p>anCHA diseña y fabrica bases de TR para calzado barefoot en Caseros, Buenos Aires. La versión ancha de KRAFT lleva esa misma base.</p>
               </div>
               <div>
                 <b>Matrices propias, pensadas para chicos</b>
-                <p>Las suelas de niño salen de matrices hechas para nosotros, con la forma ancha y la flexibilidad que necesita un pie que crece.</p>
+                <p>Las bases de niño salen de matrices hechas para nosotros, con la forma ancha y la flexibilidad que necesita un pie que crece.</p>
               </div>
               <div>
                 <b>Experiencia en barefoot</b>
@@ -43,7 +43,7 @@ export default function HormaAnchaBlock({ full = false }) {
 
           {!full && <Link to="/horma-ancha" className="btn btn--yellow hab__more">Por qué anCHA →</Link>}
         </div>
-        <div className="hab__img"><img src="/images/elastico-ancha-arriba.jpg" alt="Zapatilla de horma ancha vista desde arriba: puntera amplia y redondeada" loading="lazy" /></div>
+        <div className="hab__img"><img src="/images/elastico-ancha-arriba.jpg" alt="Zapatilla ancha vista desde arriba: puntera amplia y redondeada" loading="lazy" /></div>
       </div>
     </section>
   );

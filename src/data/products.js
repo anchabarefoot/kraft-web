@@ -3,9 +3,9 @@
 // "Precio próximamente" y no deja agregar al carrito.
 
 export const PRECIOS = {
-  acordonado: { clasica: null, ancha: null },
-  elastico:   { clasica: null, ancha: null },
-  lona:       { clasica: null, ancha: null },
+  acordonado: { clasica: 70000, ancha: 70000 },
+  elastico:   { clasica: 70000, ancha: 70000 },
+  lona:       { clasica: 70000, ancha: 70000 },
 };
 
 export const COLORS = {
@@ -14,8 +14,8 @@ export const COLORS = {
 };
 
 export const HORMAS = {
-  clasica: { label: 'Clásica', desc: 'La horma de siempre.' },
-  ancha:   { label: 'Ancha (barefoot)', desc: 'Lugar para los cinco dedos, suela fina y flexible, sin taco.' },
+  clasica: { label: 'Clásica', desc: 'La de siempre.' },
+  ancha:   { label: 'Ancha', desc: 'Lugar para los cinco dedos, flexible y sin taco.' },
 };
 
 // Talles simples (no binumerales)
@@ -59,7 +59,7 @@ export const escolar = [
     name: 'Lona',
     sub: 'Tela liviana',
     line: 'escolar',
-    description: 'Liviana y fresca, con suela blanca plana. Para educación física y los días de calor.',
+    description: 'Liviana y fresca, con base blanca. Para educación física y los días de calor.',
     colors: ['negro'],
     hormas: ['clasica', 'ancha'],
     sizes: SIZES,
