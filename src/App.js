@@ -43,6 +43,7 @@ export default function App() {
                 <Route path="/cambios" element={<Returns />} />
                 <Route path="/carrito" element={<Cart />} />
                 <Route path="/comercios" element={<Comercios />} />
+                <Route path="/revende" element={<Comercios />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

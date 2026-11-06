@@ -16,7 +16,7 @@ export default function Footer() {
           <Link to="/horma-ancha">Por qué anCHA</Link>
           <Link to="/talles">Guía de talles</Link>
           <Link to="/cambios">Cambios y devoluciones</Link>
-          <Link to="/comercios">Comercios y colegios</Link>
+          <Link to="/comercios">Revendé KRAFT</Link>
         </nav>
         <div className="foot__contact">
           <p className="eyebrow">Contacto</p>

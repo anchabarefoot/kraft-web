@@ -61,7 +61,7 @@ export default function Navbar() {
             {l.label}{l.badge && <small>{l.badge}</small>}
           </NavLink>
         ))}
-        <NavLink to="/comercios" className="nav__dlink">Comercios</NavLink>
+        <NavLink to="/comercios" className="nav__dlink">Revendé</NavLink>
         <NavLink to="/carrito" className="nav__dlink">Carrito {count > 0 && `(${count})`}</NavLink>
       </div>
 

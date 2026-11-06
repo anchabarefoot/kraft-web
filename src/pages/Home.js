@@ -71,11 +71,11 @@ export default function Home() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="container home__b2b">
           <div>
-            <p className="eyebrow">Comercios y colegios</p>
-            <h2>Vendé KRAFT en tu local.</h2>
-            <p>Venta por mayor a zapaterías, uniformerías y cooperadoras escolares, con curva de talles para el inicio de clases.</p>
+            <p className="eyebrow">Revendé KRAFT</p>
+            <h2>Vendé KRAFT y ganá con cada par.</h2>
+            <p>Sumate a la red de revendedores: comprás a precio de reventa y la ganancia es tuya. También vendemos por mayor.</p>
           </div>
-          <Link to="/comercios" className="btn btn--yellow">Quiero vender KRAFT</Link>
+          <Link to="/comercios" className="btn btn--yellow">Quiero sumarme</Link>
         </div>
       </section>
     </>
