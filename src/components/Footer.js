@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { WHATSAPP_LABEL, MAIL, waLink } from '../contacto';
 import './Footer.css';
 
 export default function Footer() {
@@ -21,6 +22,8 @@ export default function Footer() {
         <div className="foot__contact">
           <p className="eyebrow">Contacto</p>
           <a href="https://instagram.com/kraftescolar" target="_blank" rel="noreferrer">Instagram @kraftescolar</a>
+          <a href={waLink()} target="_blank" rel="noreferrer">WhatsApp {WHATSAPP_LABEL}</a>
+          <a href={`mailto:${MAIL}`}>{MAIL}</a>
           <Link to="/cambios?arrepentimiento=1" className="foot__regret">Botón de arrepentimiento</Link>
         </div>
       </div>

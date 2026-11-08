@@ -4,6 +4,7 @@ import { GoogleLogin } from '@react-oauth/google';
 import emailjs from '@emailjs/browser';
 import { useAuth, googleEnabled } from '../context/AuthContext';
 import { escolar, COLORS, HORMAS, SIZES } from '../data/products';
+import { WHATSAPP_LABEL, MAIL, waLink } from '../contacto';
 import './Returns.css';
 
 // ─── EmailJS ─────────────────────────────────────────────────────────────────
@@ -220,7 +221,7 @@ export default function Returns() {
           </div>
           <div>
             <h3>¿Dudas?</h3>
-            <p>Escribinos por Instagram a <a href="https://instagram.com/kraftescolar" target="_blank" rel="noreferrer">@kraftescolar</a>.</p>
+            <p>Escribinos por <a href={waLink()} target="_blank" rel="noreferrer">WhatsApp al {WHATSAPP_LABEL}</a>, a <a href={`mailto:${MAIL}`}>{MAIL}</a> o por Instagram a <a href="https://instagram.com/kraftescolar" target="_blank" rel="noreferrer">@kraftescolar</a>.</p>
           </div>
         </aside>
       </div>
